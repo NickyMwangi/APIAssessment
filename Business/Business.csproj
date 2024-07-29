@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IProcesses\Downloads\**" />
+    <Compile Remove="IProcesses\Jobs\**" />
+    <Compile Remove="IProcesses\Profile\**" />
+    <Compile Remove="Processes\Downloads\**" />
+    <Compile Remove="Processes\Jobs\**" />
+    <Compile Remove="Processes\Profile\**" />
+    <EmbeddedResource Remove="IProcesses\Downloads\**" />
+    <EmbeddedResource Remove="IProcesses\Jobs\**" />
+    <EmbeddedResource Remove="IProcesses\Profile\**" />
+    <EmbeddedResource Remove="Processes\Downloads\**" />
+    <EmbeddedResource Remove="Processes\Jobs\**" />
+    <EmbeddedResource Remove="Processes\Profile\**" />
+    <None Remove="IProcesses\Downloads\**" />
+    <None Remove="IProcesses\Jobs\**" />
+    <None Remove="IProcesses\Profile\**" />
+    <None Remove="Processes\Downloads\**" />
+    <None Remove="Processes\Jobs\**" />
+    <None Remove="Processes\Profile\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="IProcesses\Jobs.cs" />
+    <Compile Remove="IProcesses\shared\IIncomingDocumentsProcess.cs" />
+    <Compile Remove="Processes\shared\IncomingDocumentsProcess.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Net.WebHeaderCollection" Version="4.3.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Library\Library.csproj" />
+  </ItemGroup>
+
+
+</Project>
